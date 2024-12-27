@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import Contact from "./Contact";
 import Projects from "./Projects";
-import Blog from "./Blog";
+// import Blog from "./Blog";
 import Services from "./Services";
 import AboutUs from "./AboutUs";
 const HomePage = () => {
@@ -26,7 +26,7 @@ const HomePage = () => {
                   potential.
                 </p>
                 <div className="btn-holder">
-                  <a href="#" className="default-btn">
+                  <a href="/Services" className="default-btn">
                     Discover More
                   </a>
                 </div>
@@ -40,7 +40,7 @@ const HomePage = () => {
                   <i className="fa-solid fa-hashtag" />
                 </div>
                 <div className="center-icon">
-                  <i className="fa-regular fa-lightbulb"/>
+                  <i className="fa-regular fa-lightbulb" />
                 </div>
                 <div className="outer-icon">
                   <i className="fa-solid fa-laptop-code"></i>
@@ -103,7 +103,7 @@ const HomePage = () => {
                     </div>
                     <div className="slider-btn">
                       <a
-                        href="book-taxi.html"
+                        href="/Contact"
                         className="default-btn"
                         data-animation="fade-in-bottom"
                         data-delay="0.9s"
@@ -163,7 +163,7 @@ const HomePage = () => {
                     </div>
                     <div className="slider-btn">
                       <a
-                        href="book-taxi.html"
+                        href="/Contact"
                         className="default-btn"
                         data-animation="fade-in-bottom"
                         data-delay="0.9s"
@@ -224,7 +224,7 @@ const HomePage = () => {
                     </div>
                     <div className="slider-btn">
                       <a
-                        href="book-taxi.html"
+                        href="/Contact"
                         className="default-btn"
                         data-animation="fade-in-bottom"
                         data-delay="0.9s"
@@ -285,7 +285,7 @@ const HomePage = () => {
                     </div>
                     <div className="slider-btn">
                       <a
-                        href="book-taxi.html"
+                        href="/Contact"
                         className="default-btn"
                         data-animation="fade-in-bottom"
                         data-delay="0.9s"
@@ -346,7 +346,7 @@ const HomePage = () => {
                     </div>
                     <div className="slider-btn">
                       <a
-                        href="book-taxi.html"
+                        href="/Contact"
                         className="default-btn"
                         data-animation="fade-in-bottom"
                         data-delay="0.9s"
@@ -390,7 +390,7 @@ const HomePage = () => {
 
       <AboutUs />
       <Services />
-      <Blog />
+      {/* <Blog /> */}
       <Projects />
       <Contact />
     </>

@@ -3,12 +3,21 @@ import { Route, Routes, BrowserRouter } from "react-router-dom";
 import ReactDOM from "react-dom/client";
 import Header from "./Header";
 import HomePage from "./HomePage";
-import AboutUs from "./AboutUs";
-import Services from "./Services";
-import Projects from "./Projects";
+// import AboutUs from "./AboutUs";
+// import Services from "./Services";
+// import Projects from "./Projects";
 import Blog from "./Blog";
 import Contact from "./Contact";
 import Footer from "./Footer";
+import About from "./components/About/About";
+import AllServices from "./components/ServicesPage/AllServices";
+import AllProjects from "./components/ProjectPage/AllProjects";
+import Development from "./components/ServicesPage/Development";
+import AppDevelopment from "./components/Services/AppDev";
+import Design from "./components/ServicesPage/Design";
+import ServicesDetail from "./components/ServicesPage/ServicesDetail";
+import ProjectDetails from "./components/ProjectPage/ProjectDetails";
+
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
@@ -16,11 +25,20 @@ root.render(
       <Header />
       <Routes>
         <Route path="/" element={<HomePage />} />
-        <Route path="/about" element={<AboutUs />} />
-        <Route path="/Services" element={<Services />} />
-        <Route path="/Projects" element={<Projects />} />
+        <Route path="/about" element={<About />} />
+        {/* <Route path="/Services" element={<Services />} /> */}
+
+        <Route path="/Projects" element={<AllProjects />} />
+        <Route path="/project/:id" element={<ProjectDetails />} />
         <Route path="/Blog" element={<Blog />} />
         <Route path="/contact" element={<Contact />} />
+
+        {/* Services */}
+        <Route path="/Services" element={<AllServices />} />
+        <Route path="/Services/detail" element={<ServicesDetail />} />
+        <Route path="/Services/development" element={<Development />} />
+        <Route path="/Services/AppDevelopment" element={<AppDevelopment />} />
+        <Route path="/Services/Design" element={<Design />} />
       </Routes>
       {/* <HomePage /> */}
       {/* <AboutUs />

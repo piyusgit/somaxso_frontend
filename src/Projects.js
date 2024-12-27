@@ -35,6 +35,7 @@ const Projects = () => {
                 animationDelay: "300ms",
                 animationName: "fade-in-right",
               }}
+              onClick={scrollToTop}
             >
               View All Projects
             </Link>
@@ -70,7 +71,14 @@ const Projects = () => {
                     </div>
                     <div className="project-content">
                       <h4>
-                         <Link to="" onClick={(e)=>{e.preventDefault()}}>Design</Link>
+                        <Link
+                          to=""
+                          onClick={(e) => {
+                            e.preventDefault();
+                          }}
+                        >
+                          Design
+                        </Link>
                       </h4>
                       <h3>
                         <Link
@@ -82,7 +90,7 @@ const Projects = () => {
                           The Power of Web Development
                         </Link>
                       </h3>
-                      <Link
+                      {/* <Link
                         to=""
                         onClick={(e) => {
                           e.preventDefault();
@@ -91,7 +99,7 @@ const Projects = () => {
                       >
                         Read More
                         <i className="las la-long-arrow-alt-right" />
-                      </Link>
+                      </Link> */}
                     </div>
                   </div>
                 </div>
@@ -115,7 +123,14 @@ const Projects = () => {
                     </div>
                     <div className="project-content">
                       <h4>
-                         <Link to="" onClick={(e)=>{e.preventDefault()}}>Technology</Link>
+                        <Link
+                          to=""
+                          onClick={(e) => {
+                            e.preventDefault();
+                          }}
+                        >
+                          Technology
+                        </Link>
                       </h4>
                       <h3>
                         <Link
@@ -127,7 +142,7 @@ const Projects = () => {
                           Emerging IT Technologies
                         </Link>
                       </h3>
-                      <Link
+                      {/* <Link
                         to=""
                         onClick={(e) => {
                           e.preventDefault();
@@ -136,7 +151,7 @@ const Projects = () => {
                       >
                         Read More
                         <i className="las la-long-arrow-alt-right" />
-                      </Link>
+                      </Link> */}
                     </div>
                   </div>
                 </div>
@@ -180,7 +195,7 @@ const Projects = () => {
                           Innovative Business Ideas
                         </Link>
                       </h3>
-                      <Link
+                      {/* <Link
                         to=""
                         onClick={(e) => {
                           e.preventDefault();
@@ -189,7 +204,7 @@ const Projects = () => {
                       >
                         Read More
                         <i className="las la-long-arrow-alt-right" />
-                      </Link>
+                      </Link> */}
                     </div>
                   </div>
                 </div>
@@ -202,23 +217,40 @@ const Projects = () => {
                 >
                   <div className="project-item">
                     <div className="project-thumb">
-                       <Link to="" onClick={(e)=>{e.preventDefault()}}>
+                      <Link
+                        to=""
+                        onClick={(e) => {
+                          e.preventDefault();
+                        }}
+                      >
                         <img src="assets/images/project-1.jpg" alt="img" />
                       </Link>
                     </div>
                     <div className="project-content">
                       <h4>
-                        <Link to="" onClick={(e)=>{e.preventDefault()}}>Tech App</Link>
+                        <Link
+                          to=""
+                          onClick={(e) => {
+                            e.preventDefault();
+                          }}
+                        >
+                          Tech App
+                        </Link>
                       </h4>
                       <h3>
-                         <Link to="" onClick={(e)=>{e.preventDefault()}}>
+                        <Link
+                          to=""
+                          onClick={(e) => {
+                            e.preventDefault();
+                          }}
+                        >
                           Branding the Digital Age
                         </Link>
                       </h3>
-                       <Link to="" onClick={(e)=>{e.preventDefault()}} className="read-more">
+                      {/* <Link to="" onClick={(e)=>{e.preventDefault()}} className="read-more">
                         Read More
                         <i className="las la-long-arrow-alt-right" />
-                      </Link>
+                      </Link> */}
                     </div>
                   </div>
                 </div>
@@ -231,23 +263,40 @@ const Projects = () => {
                 >
                   <div className="project-item">
                     <div className="project-thumb">
-                       <Link to="" onClick={(e)=>{e.preventDefault()}}>
+                      <Link
+                        to=""
+                        onClick={(e) => {
+                          e.preventDefault();
+                        }}
+                      >
                         <img src="assets/images/project-2.jpg" alt="img" />
                       </Link>
                     </div>
                     <div className="project-content">
                       <h4>
-                         <Link to="" onClick={(e)=>{e.preventDefault()}}>Hybrid Apps</Link>
+                        <Link
+                          to=""
+                          onClick={(e) => {
+                            e.preventDefault();
+                          }}
+                        >
+                          Hybrid Apps
+                        </Link>
                       </h4>
                       <h3>
-                         <Link to="" onClick={(e)=>{e.preventDefault()}}>
+                        <Link
+                          to=""
+                          onClick={(e) => {
+                            e.preventDefault();
+                          }}
+                        >
                           Hybrid & Native Apps
                         </Link>
                       </h3>
-                       <Link to="" onClick={(e)=>{e.preventDefault()}} className="read-more">
+                      {/* <Link to="" onClick={(e)=>{e.preventDefault()}} className="read-more">
                         Read More
                         <i className="las la-long-arrow-alt-right" />
-                      </Link>
+                      </Link> */}
                     </div>
                   </div>
                 </div>
@@ -260,23 +309,40 @@ const Projects = () => {
                 >
                   <div className="project-item">
                     <div className="project-thumb">
-                       <Link to="" onClick={(e)=>{e.preventDefault()}}>
+                      <Link
+                        to=""
+                        onClick={(e) => {
+                          e.preventDefault();
+                        }}
+                      >
                         <img src="assets/images/project-3.jpg" alt="img" />
                       </Link>
                     </div>
                     <div className="project-content">
                       <h4>
-                         <Link to="" onClick={(e)=>{e.preventDefault()}}>Innovation</Link>
+                        <Link
+                          to=""
+                          onClick={(e) => {
+                            e.preventDefault();
+                          }}
+                        >
+                          Innovation
+                        </Link>
                       </h4>
                       <h3>
-                         <Link to="" onClick={(e)=>{e.preventDefault()}}>
+                        <Link
+                          to=""
+                          onClick={(e) => {
+                            e.preventDefault();
+                          }}
+                        >
                           Technology & Innovation
                         </Link>
                       </h3>
-                       <Link to="" onClick={(e)=>{e.preventDefault()}} className="read-more">
+                      {/* <Link to="" onClick={(e)=>{e.preventDefault()}} className="read-more">
                         Read More
                         <i className="las la-long-arrow-alt-right" />
-                      </Link>
+                      </Link> */}
                     </div>
                   </div>
                 </div>
@@ -289,23 +355,40 @@ const Projects = () => {
                 >
                   <div className="project-item">
                     <div className="project-thumb">
-                       <Link to="" onClick={(e)=>{e.preventDefault()}}>
+                      <Link
+                        to=""
+                        onClick={(e) => {
+                          e.preventDefault();
+                        }}
+                      >
                         <img src="assets/images/project-4.jpg" alt="img" />
                       </Link>
                     </div>
                     <div className="project-content">
                       <h4>
-                         <Link to="" onClick={(e)=>{e.preventDefault()}}>IT Consultancy</Link>
+                        <Link
+                          to=""
+                          onClick={(e) => {
+                            e.preventDefault();
+                          }}
+                        >
+                          IT Consultancy
+                        </Link>
                       </h4>
                       <h3>
-                         <Link to="" onClick={(e)=>{e.preventDefault()}}>
+                        <Link
+                          to=""
+                          onClick={(e) => {
+                            e.preventDefault();
+                          }}
+                        >
                           IT Consultancy Services
                         </Link>
                       </h3>
-                       <Link to="" onClick={(e)=>{e.preventDefault()}} className="read-more">
+                      {/* <Link to="" onClick={(e)=>{e.preventDefault()}} className="read-more">
                         Read More
                         <i className="las la-long-arrow-alt-right" />
-                      </Link>
+                      </Link> */}
                     </div>
                   </div>
                 </div>
@@ -318,23 +401,40 @@ const Projects = () => {
                 >
                   <div className="project-item">
                     <div className="project-thumb">
-                       <Link to="" onClick={(e)=>{e.preventDefault()}}>
+                      <Link
+                        to=""
+                        onClick={(e) => {
+                          e.preventDefault();
+                        }}
+                      >
                         <img src="assets/images/project-1.jpg" alt="img" />
                       </Link>
                     </div>
                     <div className="project-content">
                       <h4>
-                         <Link to="" onClick={(e)=>{e.preventDefault()}}>Multitasking</Link>
+                        <Link
+                          to=""
+                          onClick={(e) => {
+                            e.preventDefault();
+                          }}
+                        >
+                          Multitasking
+                        </Link>
                       </h4>
                       <h3>
-                         <Link to="" onClick={(e)=>{e.preventDefault()}}>
+                        <Link
+                          to=""
+                          onClick={(e) => {
+                            e.preventDefault();
+                          }}
+                        >
                           Multitasking on new features
                         </Link>
                       </h3>
-                       <Link to="" onClick={(e)=>{e.preventDefault()}} className="read-more">
+                      {/* <Link to="" onClick={(e)=>{e.preventDefault()}} className="read-more">
                         Read More
                         <i className="las la-long-arrow-alt-right" />
-                      </Link>
+                      </Link> */}
                     </div>
                   </div>
                 </div>
@@ -347,23 +447,40 @@ const Projects = () => {
                 >
                   <div className="project-item">
                     <div className="project-thumb">
-                       <Link to="" onClick={(e)=>{e.preventDefault()}}>
+                      <Link
+                        to=""
+                        onClick={(e) => {
+                          e.preventDefault();
+                        }}
+                      >
                         <img src="assets/images/project-2.jpg" alt="img" />
                       </Link>
                     </div>
                     <div className="project-content">
                       <h4>
-                         <Link to="" onClick={(e)=>{e.preventDefault()}}>Quick Support</Link>
+                        <Link
+                          to=""
+                          onClick={(e) => {
+                            e.preventDefault();
+                          }}
+                        >
+                          Quick Support
+                        </Link>
                       </h4>
                       <h3>
-                         <Link to="" onClick={(e)=>{e.preventDefault()}}>
+                        <Link
+                          to=""
+                          onClick={(e) => {
+                            e.preventDefault();
+                          }}
+                        >
                           Quick IT Support
                         </Link>
                       </h3>
-                       <Link to="" onClick={(e)=>{e.preventDefault()}} className="read-more">
+                      {/* <Link to="" onClick={(e)=>{e.preventDefault()}} className="read-more">
                         Read More
                         <i className="las la-long-arrow-alt-right" />
-                      </Link>
+                      </Link> */}
                     </div>
                   </div>
                 </div>
@@ -376,23 +493,40 @@ const Projects = () => {
                 >
                   <div className="project-item">
                     <div className="project-thumb">
-                       <Link to="" onClick={(e)=>{e.preventDefault()}}>
+                      <Link
+                        to=""
+                        onClick={(e) => {
+                          e.preventDefault();
+                        }}
+                      >
                         <img src="assets/images/project-3.jpg" alt="img" />
                       </Link>
                     </div>
                     <div className="project-content">
                       <h4>
-                         <Link to="" onClick={(e)=>{e.preventDefault()}}>Branding</Link>
+                        <Link
+                          to=""
+                          onClick={(e) => {
+                            e.preventDefault();
+                          }}
+                        >
+                          Branding
+                        </Link>
                       </h4>
                       <h3>
-                         <Link to="" onClick={(e)=>{e.preventDefault()}}>
-                          Companies branding 
+                        <Link
+                          to=""
+                          onClick={(e) => {
+                            e.preventDefault();
+                          }}
+                        >
+                          Companies branding
                         </Link>
                       </h3>
-                       <Link to="" onClick={(e)=>{e.preventDefault()}} className="read-more">
+                      {/* <Link to="" onClick={(e)=>{e.preventDefault()}} className="read-more">
                         Read More
                         <i className="las la-long-arrow-alt-right" />
-                      </Link>
+                      </Link> */}
                     </div>
                   </div>
                 </div>

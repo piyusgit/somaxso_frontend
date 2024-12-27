@@ -46,7 +46,7 @@ const Services = () => {
                 websites and delivering top-notch web development solutions.
               </p>
               <Link
-                to="/services"
+                to="/Services/development"
                 className="las la-long-arrow-aly-right"
                 onClick={scrollToTop}
               >
@@ -73,7 +73,7 @@ const Services = () => {
                 user-friendly, high-performance mobile apps.
               </p>
               <Link
-                to="/services"
+                to="/Services/AppDevelopment"
                 className="las la-long-arrow-aly-right"
                 onClick={scrollToTop}
               >
@@ -100,7 +100,7 @@ const Services = () => {
                 that are both visually appealing and user-friendly.
               </p>
               <Link
-                to="/services"
+                to="/Services/Design"
                 className="las la-long-arrow-aly-right"
                 onClick={scrollToTop}
               >
@@ -118,7 +118,11 @@ const Services = () => {
             animationName: "fade-in-bottom",
           }}
         >
-          <Link to="/services" className="default-btn" onClick={scrollToTop}>
+          <Link
+            to="/Services/detail"
+            className="default-btn"
+            onClick={scrollToTop}
+          >
             Explore all Services
           </Link>
         </div>

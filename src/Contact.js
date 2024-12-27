@@ -1,5 +1,65 @@
-import React from "react";
+import React, { useState } from "react";
+import axios from "axios";
+
 const Contact = () => {
+  const [formData, setFormData] = useState({
+    firstname: "",
+    lastname: "",
+    email: "",
+    phone: "",
+    message: "",
+  });
+
+  const [formStatus, setFormStatus] = useState("");
+
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setFormData((prev) => ({ ...prev, [name]: value }));
+  };
+
+  const submitForm = async (e) => {
+    e.preventDefault();
+
+    try {
+      const response = await axios.post(
+        "http://localhost:8080/form_detail",
+        formData,
+        {
+          headers: {
+            "Content-Type": "application/json",
+          },
+        }
+      );
+      setFormStatus(response.data.message || "Message sent successfully!");
+      setFormData({
+        firstname: "",
+        lastname: "",
+        email: "",
+        phone: "",
+        message: "",
+      });
+
+      // Clear status after 3 seconds
+      setTimeout(() => setFormStatus(""), 3000);
+    } catch (error) {
+      // Handle validation error or other errors
+      if (
+        error.response &&
+        error.response.data &&
+        error.response.data.message
+      ) {
+        setFormStatus(error.response.data.message); // Backend validation message
+      } else {
+        setFormStatus("An error occurred. Please try again."); // Fallback error message
+      }
+
+      // console.error("Error submitting the form:", error);
+
+      // Clear status after 3 seconds
+      setTimeout(() => setFormStatus(""), 3000);
+    }
+  };
+
   return (
     <>
       <section className="contact-section bd-bottom padding">
@@ -20,8 +80,8 @@ const Contact = () => {
                 <ul className="contact-details">
                   <li>
                     <i className="las la-map-marked-alt" />
-                    SCO-5, 2nd Floor, Sector-14,
-                    <br /> Near Civil Hospital Hisar, 125001
+                    SFF-8, Neelkanth Complex,
+                    <br /> Delhi Road, Hisar, Haryana 125001
                   </li>
                   <li>
                     <i className="las la-envelope-open" />
@@ -37,8 +97,7 @@ const Contact = () => {
             <div className="col-md-6">
               <div className="contact-form">
                 <form
-                  action="contact.php"
-                  method="post"
+                  onSubmit={submitForm}
                   id="ajax_contact"
                   className="form-horizontal"
                 >
@@ -54,7 +113,9 @@ const Contact = () => {
                         name="firstname"
                         className="form-control"
                         placeholder="First Name"
-                        required=""
+                        value={formData.firstname}
+                        onChange={handleChange}
+                        required
                       />
                     </div>
                     <div className="form-field">
@@ -64,7 +125,9 @@ const Contact = () => {
                         name="lastname"
                         className="form-control"
                         placeholder="Last Name"
-                        required=""
+                        value={formData.lastname}
+                        onChange={handleChange}
+                        required
                       />
                     </div>
                     <div className="form-field">
@@ -74,7 +137,9 @@ const Contact = () => {
                         name="email"
                         className="form-control"
                         placeholder="Email"
-                        required=""
+                        value={formData.email}
+                        onChange={handleChange}
+                        required
                       />
                     </div>
                     <div className="form-field">
@@ -84,7 +149,9 @@ const Contact = () => {
                         name="phone"
                         className="form-control"
                         placeholder="Phone Number"
-                        required=""
+                        value={formData.phone}
+                        onChange={handleChange}
+                        required
                       />
                     </div>
                     <div className="form-field message">
@@ -95,17 +162,30 @@ const Contact = () => {
                         rows={4}
                         className="form-control"
                         placeholder="Message"
-                        required=""
-                        defaultValue={""}
+                        value={formData.message}
+                        onChange={handleChange}
+                        required
                       />
                     </div>
                     <div className="form-field submit-btn">
                       <button id="submit" className="default-btn" type="submit">
-                        Send Massage
+                        Send Message
                       </button>
                     </div>
                   </div>
-                  <div id="form-messages" className="alert" role="alert" />
+                  {formStatus && (
+                    <div
+                      id="form-messages"
+                      className="alert"
+                      style={{
+                        color: formStatus.includes("error") ? "red" : "blue",
+                        marginTop: "1rem",
+                        fontSize: "1.2rem",
+                      }}
+                    >
+                      {formStatus}
+                    </div>
+                  )}
                 </form>
               </div>
             </div>
@@ -115,4 +195,5 @@ const Contact = () => {
     </>
   );
 };
+
 export default Contact;

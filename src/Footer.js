@@ -1,9 +1,8 @@
-import React from "react"
+import React from "react";
 import { Link } from "react-router-dom";
 
 const Footer = () => {
-
-  function scrollToTop(){
+  function scrollToTop() {
     window.scrollTo({ top: 0, behavior: "smooth" });
   }
   return (
@@ -17,7 +16,7 @@ const Footer = () => {
             <p className="para">
               We offer tailored IT coaching and consulting services designed to
               help you achieve your career goals and unleash your full
-              potentail.
+              potential.
             </p>
             <div className="social-links">
               <a href="#">
@@ -38,13 +37,13 @@ const Footer = () => {
             <h3 className="widget-title">Company</h3>
             <ul>
               <li className="widget">
-                <a href="#">About Us</a>
+                <a href="/about">About Us</a>
               </li>
               <li>
-                <a href="#">Services</a>
+                <a href="/Services">Services</a>
               </li>
               <li>
-                <a href="#">Projects</a>
+                <a href="/Projects">Projects</a>
               </li>
               {/* <li>
                 <a href="#">Blog Standard</a>
@@ -60,7 +59,7 @@ const Footer = () => {
                 <br />
                 Hisar, 125001
               </li>
-              <li>Mon-Sat:10.00 am to 7.00pm</li>
+              <li>Mon-Fri: 10.00 am to 7.00pm</li>
               <li>
                 +91 8607638096 <br />
                 info@somaxso.com
@@ -80,12 +79,12 @@ const Footer = () => {
             © <span id="currentYear" /> Somaxso, All Rights Reserved.
           </div>
           <ul>
-            <li>
+            {/* <li>
               <a href="#">Privacy Policy</a>
             </li>
             <li>
               <a href="#">Terms of Use</a>
-            </li>
+            </li> */}
             {/* <li>
               <a href="#">Sales and Refunds</a>
             </li> */}
@@ -96,5 +95,5 @@ const Footer = () => {
       {/* /.container */}
     </footer>
   );
-}
- export default Footer
+};
+export default Footer;
