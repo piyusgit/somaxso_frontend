@@ -22,7 +22,7 @@ const Contact = () => {
 
     try {
       const response = await axios.post(
-        "http://localhost:8080/form_detail",
+        "https://somaxso-backend.vercel.app/form_detail",
         formData,
         {
           headers: {
