@@ -13,7 +13,7 @@ import About from "./components/About/About";
 import AllServices from "./components/ServicesPage/AllServices";
 import AllProjects from "./components/ProjectPage/AllProjects";
 import Development from "./components/ServicesPage/Development";
-import AppDevelopment from "./components/Services/AppDev";
+import AppDevelopment from "./components/ServicesPage/AppDev";
 import Design from "./components/ServicesPage/Design";
 import ServicesDetail from "./components/ServicesPage/ServicesDetail";
 import ProjectDetails from "./components/ProjectPage/ProjectDetails";
