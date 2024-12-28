@@ -17,6 +17,7 @@ import AppDevelopment from "./components/ServicesPage/AppDev";
 import Design from "./components/ServicesPage/Design";
 import ServicesDetail from "./components/ServicesPage/ServicesDetail";
 import ProjectDetails from "./components/ProjectPage/ProjectDetails";
+import BlogDetails from "./components/Blog/BlogDetails";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
@@ -31,6 +32,7 @@ root.render(
         <Route path="/Projects" element={<AllProjects />} />
         <Route path="/project/:id" element={<ProjectDetails />} />
         <Route path="/Blog" element={<Blog />} />
+        <Route path="/Blog/:id/posts" element={<BlogDetails />} />
         <Route path="/contact" element={<Contact />} />
 
         {/* Services */}

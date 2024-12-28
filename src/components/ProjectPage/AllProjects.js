@@ -10,21 +10,24 @@ const AllProjects = () => {
     <>
       <section className="project-section bg-grey padding">
         <div className="container">
-          <div className="section-heading-wrap text-center mb-40 ">
-            <div className="section-heading ">
-              <h4 className="sub-heading">Our Complete Crafts</h4>
-              <h2>
-                Market-leading digital <br />
-                expertise at your fingertips!
-              </h2>
-            </div>
-            {/* <Link to="/projects" className="default-btn">
-            View All Projects
-          </Link> */}
+          <div
+            class="section-heading text-center mb-40 wow fade-in-bottom"
+            data-wow-delay="200ms"
+          >
+            <h4 class="sub-heading">Our Services</h4>
+            <h2>Elevating Your Business with Cutting-Edge Technology</h2>
           </div>
-          <div className="">
-            <div className="project-carousel">
-              {projects.map((project) => (
+          <div className="row">
+            {projects.map((project) => (
+              <div
+                className="col-lg-4 col-md-6 sm-padding wow fade-in-bottom"
+                data-wow-delay="300ms"
+                style={{
+                  visibility: "visible",
+                  animationDelay: "300ms",
+                  animationName: "fade-in-bottom",
+                }}
+              >
                 <div key={project.id} className="project-item">
                   <div className="project-thumb">
                     <Link to={`/project/${project.id}`}>
@@ -45,8 +48,8 @@ const AllProjects = () => {
                     </Link>
                   </div>
                 </div>
-              ))}
-            </div>
+              </div>
+            ))}
           </div>
         </div>
       </section>

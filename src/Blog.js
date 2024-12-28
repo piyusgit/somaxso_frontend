@@ -1,18 +1,21 @@
-import React,{useState} from "react";
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
 
 const Blog = () => {
- /* const [expandedPostIndex, setExpandedPostIndex] = useState(null);
+  /* const [expandedPostIndex, setExpandedPostIndex] = useState(null);
 
  const showFullContent = (index) => {
    setExpandedPostIndex(index);
  }; */
- const [expandedPostIndex, setExpandedPostIndex] = useState(null);
+  const [expandedPostIndex, setExpandedPostIndex] = useState(null);
 
- const toggleContent = (index) => {
-   setExpandedPostIndex(expandedPostIndex === index ? null : index);
- };
+  const toggleContent = (index) => {
+    setExpandedPostIndex(expandedPostIndex === index ? null : index);
+  };
 
+  function scrollToTop() {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  }
   const blogposts = [
     {
       url: "assets/images/post-1.jpg",
@@ -91,86 +94,88 @@ const Blog = () => {
       <section className="blog-section blog-page bg-grey ">
         <div className="container">
           <div className="row">
-            <div className="col-lg-8 sm-padding">
-              <div className="row grid-post">
-                {blogposts.map((item, index) => (
-                  <>
-                    <div className="col-md-6 padding-15" key={index}>
-                      <div className="post-card">
-                        <div className="post-thumb">
-                          <img src={item.url} alt="post" />
-                        </div>
-                        <div className="post-content-wrap">
-                          <ul className="post-meta">
-                            <li>
-                              <i className="las la-calendar" />
-                              {item.date}
-                            </li>
-                            <li>
-                              <i className="las la-tags" />
-                              <a href="#">{item.tag}</a>
-                            </li>
-                          </ul>
-                          <div className="post-content">
-                            <h3>
-                              <Link
-                                to=""
-                                className="hover"
-                                onClick={(e) => {
-                                  e.preventDefault();
-                                }}
-                              >
-                                {item.title}
-                              </Link>
-                            </h3>
-                            <p>
-                              {expandedPostIndex === index
-                                ? item.fullContent
-                                : item.shortContent}
-                            </p>
-                            <span
-                              className="read-more"
-                              style={{ cursor: "pointer" }}
-                              onClick={() => toggleContent(index)}
+            {/* <div className="col-lg-8 sm-padding"> */}
+            <div className="row grid-post">
+              {blogposts.map((item, index) => (
+                <>
+                  <div className="col-md-6 padding-15" key={index}>
+                    <div className="post-card">
+                      <div className="post-thumb">
+                        <img src={item.url} alt="post" />
+                      </div>
+                      <div className="post-content-wrap">
+                        <ul className="post-meta">
+                          <li>
+                            <i className="las la-calendar" />
+                            {item.date}
+                          </li>
+                          <li>
+                            <i className="las la-tags" />
+                            {item.tag}
+                            {/* <a href={`/Blog/${index}/posts`}>{item.tag}</a> */}
+                          </li>
+                        </ul>
+                        <div className="post-content">
+                          <h3>
+                            <Link
+                              to={`/Blog/${index}/posts`}
+                              className="hover"
+                              // onClick={(e) => {
+                              //   e.preventDefault();
+                              // }}
+                              onClick={scrollToTop}
                             >
-                              {expandedPostIndex === index
-                                ? "Show Less"
-                                : "Read More"}
-                            </span>
-                          </div>
+                              {item.title}
+                            </Link>
+                          </h3>
+                          <p>
+                            {expandedPostIndex === index
+                              ? item.fullContent
+                              : item.shortContent}
+                          </p>
+                          <span
+                            className="read-more"
+                            style={{ cursor: "pointer" }}
+                            onClick={() => toggleContent(index)}
+                          >
+                            {expandedPostIndex === index
+                              ? "Show Less"
+                              : "Read More"}
+                          </span>
                         </div>
                       </div>
                     </div>
-                  </>
-                ))}
-              </div>
-              <ul className="pagination-wrap text-left mt-30">
-                <li>
-                  <a href="#">
-                    <i className="las la-arrow-left" />
-                  </a>
-                </li>
-                <li>
-                  <a href="#">1</a>
-                </li>
-                <li>
-                  <a href="#" className="active">
-                    2
-                  </a>
-                </li>
-                <li>
-                  <a href="#">3</a>
-                </li>
-                <li>
-                  <a href="#">
-                    <i className="las la-arrow-right" />
-                  </a>
-                </li>
-              </ul>
-              {/*Pagination*/}
+                  </div>
+                </>
+              ))}
             </div>
+            <ul className="pagination-wrap text-left mt-30">
+              <li>
+                <a href="#">
+                  <i className="las la-arrow-left" />
+                </a>
+              </li>
+              <li>
+                <a href="#">1</a>
+              </li>
+              <li>
+                <a href="#" className="active">
+                  2
+                </a>
+              </li>
+              <li>
+                <a href="#">3</a>
+              </li>
+              <li>
+                <a href="#">
+                  <i className="las la-arrow-right" />
+                </a>
+              </li>
+            </ul>
+            {/*Pagination*/}
+            {/* </div> */}
             {/*Blog Grid*/}
-            <div className="col-lg-4 sm-padding">
+            {/* <div className="col-lg-4 sm-padding">
               <div className="sidebar-widget">
                 <form action="" className="search-form">
                   <input
@@ -184,107 +189,107 @@ const Blog = () => {
                 </form>
               </div>
               {/*Search Form*/}
-              <div className="sidebar-widget">
-                <div className="widget-title">
-                  <h3>Categories</h3>
-                </div>
-                <ul className="category-list">
-                  <li>
-                    <a href="blog-grid.html">Business Strategy</a>
-                    <span>23</span>
-                  </li>
-                  <li>
-                    <a href="blog-grid.html">Project Management</a>
-                    <span>05</span>
-                  </li>
-                  <li>
-                    <a href="blog-grid.html">Digital Marketing</a>
-                    <span>18</span>
-                  </li>
-                  <li>
-                    <a href="blog-grid.html">Customer Experience</a>
-                    <span>04</span>
-                  </li>
-                  <li>
-                    <a href="blog-grid.html">Partnership System</a>
-                    <span>15</span>
-                  </li>
-                </ul>
+            {/* <div className="sidebar-widget">
+              <div className="widget-title">
+                <h3>Categories</h3>
               </div>
-              {/*Categories*/}
-              <div className="sidebar-widget">
-                <div className="widget-title">
-                  <h3>Recent Articles</h3>
-                </div>
-                <ul className="thumb-post">
-                  {blogposts.map((item, index) => (
-                    <>
-                      <li>
-                        <div className="thumb">
-                          <img src={item.url} alt="thumb" />
-                        </div>
-                        <div className="thumb-post-info">
-                          <h3>
-                            <Link
-                              to=""
-                              onClick={(e) => {
-                                e.preventDefault();
-                              }}
-                            >
-                              {item.title}
-                            </Link>
-                          </h3>
+              <ul className="category-list">
+                <li>
+                  <a href="blog-grid.html">Business Strategy</a>
+                  <span>23</span>
+                </li>
+                <li>
+                  <a href="blog-grid.html">Project Management</a>
+                  <span>05</span>
+                </li>
+                <li>
+                  <a href="blog-grid.html">Digital Marketing</a>
+                  <span>18</span>
+                </li>
+                <li>
+                  <a href="blog-grid.html">Customer Experience</a>
+                  <span>04</span>
+                </li>
+                <li>
+                  <a href="blog-grid.html">Partnership System</a>
+                  <span>15</span>
+                </li>
+              </ul>
+            </div> */}
+            {/*Categories*/}
+            {/* <div className="sidebar-widget">
+              <div className="widget-title">
+                <h3>Recent Articles</h3>
+              </div>
+              <ul className="thumb-post">
+                {blogposts.map((item, index) => (
+                  <>
+                    <li>
+                      <div className="thumb">
+                        <img src={item.url} alt="thumb" />
+                      </div>
+                      <div className="thumb-post-info">
+                        <h3>
                           <Link
                             to=""
-                            className="date"
                             onClick={(e) => {
                               e.preventDefault();
                             }}
                           >
                             {item.title}
                           </Link>
-                        </div>
-                      </li>
-                    </>
-                  ))}
-                </ul>
+                        </h3>
+                        <Link
+                          to=""
+                          className="date"
+                          onClick={(e) => {
+                            e.preventDefault();
+                          }}
+                        >
+                          {item.title}
+                        </Link>
+                      </div>
+                    </li>
+                  </>
+                ))}
+              </ul>
+            </div> */}
+            {/*Recent Thumb Post*/}
+            {/* <div className="sidebar-widget">
+              <div className="widget-title">
+                <h3>Tags</h3>
               </div>
-              {/*Recent Thumb Post*/}
-              <div className="sidebar-widget">
-                <div className="widget-title">
-                  <h3>Tags</h3>
-                </div>
-                <ul className="tags">
-                  <li>
-                    <a href="#">business</a>
-                  </li>
-                  <li>
-                    <a href="#">marketing</a>
-                  </li>
-                  <li>
-                    <a href="#">startup</a>
-                  </li>
-                  <li>
-                    <a href="#">design</a>
-                  </li>
-                  <li>
-                    <a href="#">consulting</a>
-                  </li>
-                  <li>
-                    <a href="#">strategy</a>
-                  </li>
-                  <li>
-                    <a href="#">development</a>
-                  </li>
-                  <li>
-                    <a href="#">tips</a>
-                  </li>
-                  <li>
-                    <a href="#">Seo</a>
-                  </li>
-                </ul>
-              </div>
-            </div>
+              <ul className="tags">
+                <li>
+                  <a href="#">business</a>
+                </li>
+                <li>
+                  <a href="#">marketing</a>
+                </li>
+                <li>
+                  <a href="#">startup</a>
+                </li>
+                <li>
+                  <a href="#">design</a>
+                </li>
+                <li>
+                  <a href="#">consulting</a>
+                </li>
+                <li>
+                  <a href="#">strategy</a>
+                </li>
+                <li>
+                  <a href="#">development</a>
+                </li>
+                <li>
+                  <a href="#">tips</a>
+                </li>
+                <li>
+                  <a href="#">Seo</a>
+                </li>
+              </ul>
+            </div> */}
+            {/* </div> */}
           </div>
         </div>
       </section>

@@ -42,30 +42,41 @@ const ProjectDetails = () => {
       </section> */}
       <section className="project-section bg-grey padding">
         <div className="container">
-          <div className="section-heading-wrap text-center mb-40 ">
+          {/* <div className="section-heading-wrap text-center mb-40 ">
             <div className="section-heading ">
               <h4 className="sub-heading">Our Complete Crafts</h4>
               <h2>
                 Market-leading digital <br />
                 expertise at your fingertips!
               </h2>
-            </div>
+            </div> */}
+
+          <div
+            class="section-heading text-center mb-40 wow fade-in-bottom"
+            data-wow-delay="200ms"
+          >
+            <h4 class="sub-heading">Our Complete Crafts</h4>
+            <h2>
+              Market-leading digital <br />
+              expertise at your fingertips!
+            </h2>
           </div>
+
           <div className="">
-            <div className="project-carousel">
-              <div className="project-item">
-                <div className="project-thumb">
-                  <img src={project.image} alt={project.title} />
-                </div>
-                <div className="project-content">
-                  <h1>{project.title}</h1>
-                  <h4>{project.category}</h4>
-                  <p>{project.details}</p>
-                </div>
+            {/* <div className="project-carousel"> */}
+            <div className="project-item">
+              <div className="project-thumb">
+                <img src={project.image} alt={project.title} />
+              </div>
+              <div className="project-content">
+                <h1>{project.title}</h1>
+                <h4>{project.category}</h4>
+                <p>{project.details}</p>
               </div>
             </div>
           </div>
         </div>
+        {/* </div> */}
       </section>
     </>
   );
