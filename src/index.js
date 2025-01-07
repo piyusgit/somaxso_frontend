@@ -18,6 +18,7 @@ import Design from "./components/ServicesPage/Design";
 import ServicesDetail from "./components/ServicesPage/ServicesDetail";
 import ProjectDetails from "./components/ProjectPage/ProjectDetails";
 import BlogDetails from "./components/Blog/BlogDetails";
+import Common from "./Common";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
@@ -26,7 +27,7 @@ root.render(
       <Header />
       <Routes>
         <Route path="/" element={<HomePage />} />
-        <Route path="/about" element={<About />} />
+        <Route path="/about" element={<Common />} />
         {/* <Route path="/Services" element={<Services />} /> */}
 
         <Route path="/Projects" element={<AllProjects />} />
