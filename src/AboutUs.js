@@ -42,7 +42,7 @@ const AboutUs = () => {
                   that scale with your business, ensuring long-term success in
                   an ever-evolving digital landscape.
                 </p>
-                <Link to="/aboutus" className="read-more" onClick={scrollToTop}>
+                <Link to="/about" className="read-more" onClick={scrollToTop}>
                   <i className="las la-arrow-right" />
                 </Link>
                 <h4>
