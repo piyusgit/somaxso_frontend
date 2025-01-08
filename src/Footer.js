@@ -54,10 +54,8 @@ const Footer = () => {
             <h3 className="widget-title">Contact</h3>
             <ul>
               <li>
-                SCO-5, 2nd Floor, Sector-14, <br />
-                Near Civil Hospital
-                <br />
-                Hisar, 125001
+                Neelkanth Complex,
+                <br /> Delhi Road, Hisar, Haryana 125001
               </li>
               <li>Mon-Fri: 10.00 am to 7.00pm</li>
               <li>

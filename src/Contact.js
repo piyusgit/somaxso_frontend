@@ -80,7 +80,7 @@ const Contact = () => {
                 <ul className="contact-details">
                   <li>
                     <i className="las la-map-marked-alt" />
-                    SFF-8, Neelkanth Complex,
+                    Neelkanth Complex,
                     <br /> Delhi Road, Hisar, Haryana 125001
                   </li>
                   <li>
