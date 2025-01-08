@@ -149,7 +149,8 @@ const Blog = () => {
                 </>
               ))}
             </div>
-            <ul className="pagination-wrap text-left mt-30">
+            <div className=" mb-40"></div>
+            {/* <ul className="pagination-wrap text-left mt-30">
               <li>
                 <a href="#">
                   <i className="las la-arrow-left" />
@@ -171,7 +172,7 @@ const Blog = () => {
                   <i className="las la-arrow-right" />
                 </a>
               </li>
-            </ul>
+            </ul> */}
             {/*Pagination*/}
             {/* </div> */}
             {/*Blog Grid*/}
@@ -294,7 +295,7 @@ const Blog = () => {
         </div>
       </section>
       <section className="call-back-section padding">
-        <div className="map-pattern" />
+        <div className="map-pattern " />
         <div className="container">
           <div
             className="section-heading text-center mb-40 wow fade-in-bottom"
