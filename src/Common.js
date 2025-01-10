@@ -35,7 +35,7 @@ const Common = () => {
               >
                 <div className="service-item">
                   <h3>About Somaxso</h3>
-                  <p>
+                  <p style={{ textAlign: "left" }}>
                     At <strong>Somaxso</strong>, we are dedicated to
                     revolutionizing the world of software development with
                     innovative solutions that empower businesses to thrive in
@@ -44,7 +44,7 @@ const Common = () => {
                     ensures that every project meets the unique needs of our
                     clients.
                   </p>
-                  <p>
+                  <p style={{ textAlign: "left" }}>
                     We pride ourselves on fostering long-term partnerships and
                     driving business growth with cutting-edge technology and
                     unparalleled customer service.
@@ -61,37 +61,40 @@ const Common = () => {
                 }}
               >
                 <div className="service-item">
-                  <h3>Why Choose Us?</h3>
-                  <p>
-                    <strong>Somaxso</strong> is not just another software
-                    company; we are your strategic partner for innovation and
-                    growth. Here’s what sets us apart:
-                  </p>
-                  <ul>
-                    <li>
-                      <strong>Customer-Centric Approach:</strong> We listen,
-                      understand, and deliver solutions that exceed your
-                      expectations.
-                    </li>
-                    <li>
-                      <strong>Innovative Thinking:</strong> We bring creativity
-                      and fresh ideas to every project, ensuring your business
-                      stays ahead of the curve.
-                    </li>
-                    <li>
-                      <strong>Uncompromising Quality:</strong> Every solution is
-                      rigorously tested and fine-tuned to perfection.
-                    </li>
-                    <li>
-                      <strong>Experienced Team:</strong> Our team of industry
-                      experts brings unmatched skills and expertise to the
-                      table.
-                    </li>
-                  </ul>
-                  <p>
-                    Partner with Somaxso to transform your vision into reality.
-                    Together, let’s shape the future of your business.
-                  </p>
+                  <div className="hero-content" style={{ textAlign: "center" }}>
+                    <h3>Why Choose Us?</h3>
+                    <p style={{ textAlign: "left" }}>
+                      <strong>Somaxso</strong> is not just another software
+                      company; we are your strategic partner for innovation and
+                      growth. Here’s what sets us apart:
+                    </p>
+                    <ul style={{ textAlign: "left" }}>
+                      <li>
+                        <strong>Customer-Centric Approach:</strong> We listen,
+                        understand, and deliver solutions that exceed your
+                        expectations.
+                      </li>
+                      <li>
+                        <strong>Innovative Thinking:</strong> We bring
+                        creativity and fresh ideas to every project, ensuring
+                        your business stays ahead of the curve.
+                      </li>
+                      <li>
+                        <strong>Uncompromising Quality:</strong> Every solution
+                        is rigorously tested and fine-tuned to perfection.
+                      </li>
+                      <li>
+                        <strong>Experienced Team:</strong> Our team of industry
+                        experts brings unmatched skills and expertise to the
+                        table.
+                      </li>
+                    </ul>
+                    <p style={{ textAlign: "left" }}>
+                      Partner with Somaxso to transform your vision into
+                      reality. Together, let’s shape the future of your
+                      business.
+                    </p>
+                  </div>
                 </div>
               </div>
             </div>
