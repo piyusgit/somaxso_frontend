@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 const Common = () => {
   return (
@@ -299,9 +300,11 @@ const Common = () => {
                     we are here to help.
                   </p>
                   <p>
-                    Contact us today to discover how we can partner with you to
-                    transform your IT landscape and unlock new opportunities for
-                    growth.
+                    <strong>
+                      <Link to="/contact">Contact us today</Link>
+                    </strong>
+                    to discover how we can partner with you to transform your IT
+                    landscape and unlock new opportunities for growth.
                   </p>
                 </div>
               </div>
