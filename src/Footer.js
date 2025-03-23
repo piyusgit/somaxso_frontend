@@ -22,13 +22,21 @@ const Footer = () => {
               <a href="#">
                 <i className="fab fa-facebook-f" />
               </a>
-              <a href="https://x.com/SomaxsoOfficial">
+              <a
+                href="https://x.com/SomaxsoOfficial"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
                 <i className="fab fa-twitter" />
               </a>
               <a href="#">
                 <i className="fab fa-instagram" />
               </a>
-              <a href="http://www.linkedin.com/in/SomaxsoOfficial">
+              <a
+                href="http://www.linkedin.com/in/SomaxsoOfficial"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
                 <i className="fab fa-linkedin-in" />
               </a>
             </div>
